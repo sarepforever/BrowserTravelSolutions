@@ -1,0 +1,11 @@
+C:\Users\sarep\source\repos\BrowserTravel\Shared\bin\Debug\net5.0\BrowserTravel.Shared.deps.json
+C:\Users\sarep\source\repos\BrowserTravel\Shared\bin\Debug\net5.0\BrowserTravel.Shared.dll
+C:\Users\sarep\source\repos\BrowserTravel\Shared\bin\Debug\net5.0\ref\BrowserTravel.Shared.dll
+C:\Users\sarep\source\repos\BrowserTravel\Shared\bin\Debug\net5.0\BrowserTravel.Shared.pdb
+C:\Users\sarep\source\repos\BrowserTravel\Shared\obj\Debug\net5.0\BrowserTravel.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sarep\source\repos\BrowserTravel\Shared\obj\Debug\net5.0\BrowserTravel.Shared.AssemblyInfoInputs.cache
+C:\Users\sarep\source\repos\BrowserTravel\Shared\obj\Debug\net5.0\BrowserTravel.Shared.AssemblyInfo.cs
+C:\Users\sarep\source\repos\BrowserTravel\Shared\obj\Debug\net5.0\BrowserTravel.Shared.csproj.CoreCompileInputs.cache
+C:\Users\sarep\source\repos\BrowserTravel\Shared\obj\Debug\net5.0\BrowserTravel.Shared.dll
+C:\Users\sarep\source\repos\BrowserTravel\Shared\obj\Debug\net5.0\ref\BrowserTravel.Shared.dll
+C:\Users\sarep\source\repos\BrowserTravel\Shared\obj\Debug\net5.0\BrowserTravel.Shared.pdb

@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\sarep\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\sarep\\.nuget\\packages"
+    ]
+  }
+}

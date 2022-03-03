@@ -1,0 +1,42 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <div class="main">
+
+        <div class="top-row px-4">
+            <AuthorizeView>
+                <Authorized>
+                    <span class="navbar-text" style="float:right; color:blue"> @context.User.Identity.Name </span>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" @onclick=@(()=>Logout()) style="margin-left:10px;">Salir</button>
+                </Authorized>
+                <NotAuthorized>
+                    <button type="button" class="btn btn-outline-primary btn-sm" @onclick=@(()=>TypeLogin(true)) >Ingresar</button>
+                    <button type="button" class="btn btn-outline-success btn-sm" @onclick=@(()=>TypeLogin(false)) style="margin-left:10px;">Registarse</button>
+                </NotAuthorized>
+            </AuthorizeView>
+        </div>
+
+        <div class="content px-4">
+            <AuthorizeView>
+                <Authorized>
+                    @Body
+                </Authorized>
+                <NotAuthorized>
+                    <div class="row">
+                        <div class="container">
+                            <div class="alert alert-warning" role="alert">
+                               Ingresa con tu usuario o crea uno nuevo.
+                            </div>
+                        </div>
+                    </div>
+                </NotAuthorized>
+            </AuthorizeView>         
+        </div>
+    </div>
+</div>
+
+<_UserLogin login="Login" userInfo="UserInfo"></_UserLogin>

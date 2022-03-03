@@ -1,0 +1,82 @@
+﻿@page "/"
+
+<h1>Libros</h1>
+
+Libros disponibles en la biblioteca.
+
+
+<div class="row justify-content-center" style="margin-top:20px">
+    @if (_GETLibrosDTO != null)
+    {
+        if (_GETLibrosDTO.Count >= 1)
+        {
+            foreach (var item in _GETLibrosDTO)
+            {
+                <div class="col-sm-2">
+                    <div class="card">
+                        <img src="/img/@item.urlImagen" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.titulo</h5>
+                            <span>
+                                <b>Autores: </b>
+                                <ul>
+                                    @foreach (var autor in item._autores)
+                                    {
+                                        <li> @autor</li>
+                                    }
+                                </ul>
+                            </span>
+                            <p class="card-text"><small class="text-muted">Pag. @item.paginas</small></p>
+                            <a class="btn btn-primary" @onclick=@(()=>DetailsBook(item))>Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+
+        }
+    }
+
+</div>
+
+
+<div class="modal" tabindex="-1" id="modalBook">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Libro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                @if (BookDTO != null)
+                {
+                    <div class="card">
+                        <img src="/img/@BookDTO.urlImagen" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@BookDTO.titulo</h5>
+                            <br />
+                            <span>
+                                @BookDTO.sinopsis
+                            </span>
+                            <span>
+                                <b>Autores: </b>
+                                <ul>
+                                    @foreach (var autor in BookDTO._autores)
+                                    {
+                                        <li> @autor</li>
+                                    }
+                                </ul>
+                            </span>
+                            <p class="card-text"><small class="text-muted">Pag. @BookDTO.paginas</small></p>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>             
+            </div>
+        </div>
+    </div>
+</div>
